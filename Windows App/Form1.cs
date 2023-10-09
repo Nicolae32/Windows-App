@@ -64,6 +64,12 @@ namespace Windows_App
         private void button1_MouseLeave(object sender, EventArgs e)
         {
             button1.BackColor = Color.White;
+            //dfkhzloivfdhapoivuhdpizfvu
+        }
+
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
+           
         }
     }
 }
