@@ -78,9 +78,9 @@ namespace Windows_App
             // 
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Location = new System.Drawing.Point(704, 0);
+            this.panel3.Location = new System.Drawing.Point(683, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(70, 30);
+            this.panel3.Size = new System.Drawing.Size(105, 30);
             this.panel3.TabIndex = 3;
             // 
             // button3
@@ -92,7 +92,7 @@ namespace Windows_App
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
-            this.button3.Location = new System.Drawing.Point(10, 0);
+            this.button3.Location = new System.Drawing.Point(45, 0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(30, 30);
             this.button3.TabIndex = 1;
@@ -108,7 +108,7 @@ namespace Windows_App
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(72)))));
-            this.button1.Location = new System.Drawing.Point(40, 0);
+            this.button1.Location = new System.Drawing.Point(75, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 30);
             this.button1.TabIndex = 0;

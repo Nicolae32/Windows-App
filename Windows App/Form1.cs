@@ -36,13 +36,14 @@ namespace Windows_App
           );
         public Form1()
         {
+            //2**
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //MessageBox.Show("Ana are mere", "Ana are mere");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -83,6 +84,7 @@ namespace Windows_App
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
+            //1**
             if (e.Button == MouseButtons.Left)
             {
                 ReleaseCapture();
@@ -92,6 +94,7 @@ namespace Windows_App
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
+            //1**
             if (e.Button == MouseButtons.Left)
             {
                 ReleaseCapture();
@@ -101,6 +104,7 @@ namespace Windows_App
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
+            //1**
             if (e.Button == MouseButtons.Left)
             {
                 ReleaseCapture();
@@ -112,6 +116,11 @@ namespace Windows_App
         {
             //Minimizez fereastra.
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
         }
     }
 }
