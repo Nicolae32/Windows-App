@@ -111,7 +111,7 @@ namespace Windows_App
         private void button3_Click(object sender, EventArgs e)
         {
             //Minimizez fereastra.
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+           // this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
         }
     }
 }
