@@ -122,5 +122,22 @@ namespace Windows_App
         {
             this.WindowState = FormWindowState.Maximized;
         }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Calculator s = new Calculator();
+            s.TopLevel = false;
+            panel4.Controls.Add(s);
+            s.Show();
+            panel5.BackColor = button2.BackColor;
+            
+            
+           
+        }
     }
 }
