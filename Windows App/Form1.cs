@@ -22,7 +22,9 @@ namespace Windows_App
 
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
+
         //2**Fac colțurile la fereastră rotunjite.
+        /*
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
          (
@@ -34,11 +36,13 @@ namespace Windows_App
              int nHeightEllipse
 
           );
+        */
         public Form1()
         {
+            
+           InitializeComponent();
             //2**
-            InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -48,12 +52,16 @@ namespace Windows_App
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
             DialogResult result = MessageBox.Show("Are you sure you want to quit the app ? ", "Exit the app", MessageBoxButtons.YesNo);
-            if(result == DialogResult.Yes)
+           if(result == DialogResult.Yes)
             {
                 Application.Exit();
             
             }
+            */
+            Application.Exit();
+
         }
 
         private void Form1_MouseHover(object sender, EventArgs e)
@@ -74,7 +82,6 @@ namespace Windows_App
         private void button1_MouseLeave(object sender, EventArgs e)
         {
             
-            //dfkhzloivfdhapoivuhdpizfvu
         }
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
@@ -127,17 +134,72 @@ namespace Windows_App
         {
 
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Calculator s = new Calculator();
             s.TopLevel = false;
             panel4.Controls.Add(s);
             s.Show();
+            
+            
+            button3.BackColor = button2.BackColor;
+            button1.BackColor = button2.BackColor;
+            panel6.BackColor = button2.BackColor;
             panel5.BackColor = button2.BackColor;
+            panel7.BackColor = button2.BackColor;
+           
             
             
            
         }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            panel5.BackColor = panel1.BackColor;
+
+        }
+        private void panel5_MouseDown(object sender, MouseEventArgs e)
+        {
+                if (e.Button == MouseButtons.Left)
+                {
+                    ReleaseCapture();
+                    SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+                }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+            panel6.BackColor = panel1.BackColor;
+        }
+
+        private void button3_Paint(object sender, PaintEventArgs e)
+        {
+            button3.BackColor = panel1.BackColor;
+        }
+
+        private void button1_Paint(object sender, PaintEventArgs e)
+        {
+            button1.BackColor = panel1.BackColor;
+        }
+
+        private void panel4_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+            panel7.BackColor = panel1.BackColor;
+        }
     }
+    
 }
