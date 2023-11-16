@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
+
 namespace Windows_App
 {
     public partial class Form1 : Form
@@ -47,7 +48,9 @@ namespace Windows_App
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show("Ana are mere", "Ana are mere");
+            System.Drawing.Rectangle rectangle = Screen.PrimaryScreen.WorkingArea;
+            this.Size = new System.Drawing.Size(Convert.ToInt32(0.5 * rectangle.Width), Convert.ToInt32(0.5 * rectangle.Height));
+            this.Location = new System.Drawing.Point(10, 10);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -127,7 +130,7 @@ namespace Windows_App
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -136,26 +139,16 @@ namespace Windows_App
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            Calculator s = new Calculator();
+            Quiz s = new Quiz();
             s.TopLevel = false;
             panel4.Controls.Add(s);
             s.Show();
             
-            
-            button3.BackColor = button2.BackColor;
-            button1.BackColor = button2.BackColor;
-            panel6.BackColor = button2.BackColor;
-            panel5.BackColor = button2.BackColor;
-            panel7.BackColor = button2.BackColor;
-           
-            
-            
-           
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
-            panel5.BackColor = panel1.BackColor;
+            
 
         }
         private void panel5_MouseDown(object sender, MouseEventArgs e)
@@ -174,17 +167,17 @@ namespace Windows_App
 
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
-            panel6.BackColor = panel1.BackColor;
+            
         }
 
         private void button3_Paint(object sender, PaintEventArgs e)
         {
-            button3.BackColor = panel1.BackColor;
+           // button3.BackColor = panel1.BackColor;
         }
 
         private void button1_Paint(object sender, PaintEventArgs e)
         {
-            button1.BackColor = panel1.BackColor;
+            //button1.BackColor = panel1.BackColor;
         }
 
         private void panel4_MouseDown(object sender, MouseEventArgs e)
@@ -198,8 +191,17 @@ namespace Windows_App
 
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
-            panel7.BackColor = panel1.BackColor;
+            
         }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else if(this.WindowState == FormWindowState.Maximized)
+            this.WindowState = FormWindowState.Normal;
+        }
+        
     }
     
 }

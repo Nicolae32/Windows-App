@@ -98,5 +98,8 @@
   <ItemGroup>
     <None Include="Resources\Restore Window - Copy.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restore Window - Copy1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

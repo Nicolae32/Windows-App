@@ -1,7 +1,7 @@
 ﻿
 namespace Windows_App
 {
-    partial class Calculator
+    partial class Quiz
     {
         /// <summary>
         /// Required designer variable.
@@ -34,14 +34,14 @@ namespace Windows_App
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(110, 74);
+            this.groupBox1.Location = new System.Drawing.Point(69, 44);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 129);
+            this.groupBox1.Size = new System.Drawing.Size(199, 150);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
-            // Calculator
+            // Quiz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -50,7 +50,7 @@ namespace Windows_App
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Calculator";
+            this.Name = "Quiz";
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Calculator_Load);
             this.ResumeLayout(false);

@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace Windows_App
 {
-    public partial class Calculator : Form
+    public partial class Quiz : Form
     {
-        public Calculator()
+        public Quiz()
         {
             InitializeComponent();
         }
 
         private void Calculator_Load(object sender, EventArgs e)
         {
-
+            System.Drawing.Rectangle rectangle = Screen.PrimaryScreen.WorkingArea;
+            this.Size = new System.Drawing.Size(Convert.ToInt32(0.5 * rectangle.Width), Convert.ToInt32(0.5 * rectangle.Height));
+            this.Location = new System.Drawing.Point(10, 10);
         }
     }
 }
