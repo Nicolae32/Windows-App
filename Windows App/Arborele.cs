@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace Windows_App
 {
-    public partial class Quiz : Form
+    public partial class Arborele : Form
     {
-        public Quiz()
+        public Arborele()
         {
             InitializeComponent();
-        }
-
-        private void Calculator_Load(object sender, EventArgs e)
-        {
-           
-
-        }
-
-        private void Quiz_Activated(object sender, EventArgs e)
-        {
-            
         }
     }
 }

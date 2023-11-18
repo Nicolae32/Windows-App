@@ -14,6 +14,7 @@ namespace Windows_App
 {
     public partial class Form1 : Form
     {
+        
         //1**Fac fereastra să poată fi mutată. 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -45,7 +46,7 @@ namespace Windows_App
             //2**
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
-
+        private Form formactive = null;
         private void Form1_Load(object sender, EventArgs e)
         {
             System.Drawing.Rectangle rectangle = Screen.PrimaryScreen.WorkingArea;
@@ -135,14 +136,12 @@ namespace Windows_App
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
+            
 
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            Quiz s = new Quiz();
-            s.TopLevel = false;
-            panel4.Controls.Add(s);
-            s.Show();
+            FormOpen(new Quiz());
             
         }
 
@@ -201,7 +200,33 @@ namespace Windows_App
             else if(this.WindowState == FormWindowState.Maximized)
             this.WindowState = FormWindowState.Normal;
         }
-        
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FormOpen(new Arborele());
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void FormOpen(Form e)
+        {
+            if (formactive != null)
+            {
+                formactive.Close();
+            }
+
+            formactive = e;
+            e.TopLevel = false;
+            e.FormBorderStyle = FormBorderStyle.None;
+            e.Dock = DockStyle.Fill;
+            panel4.Controls.Add(e);
+            e.Show();
+
+
+
+        }
     }
     
 }
