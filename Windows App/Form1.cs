@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +14,7 @@ namespace Windows_App
 {
     public partial class Form1 : Form
     {
-        
+
         //1**Fac fereastra să poată fi mutată. 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -24,7 +24,7 @@ namespace Windows_App
 
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
-
+    
         //2**Fac colțurile la fereastră rotunjite.
         /*
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -39,7 +39,8 @@ namespace Windows_App
 
           );
         */
-        public Form1()
+       
+    public Form1()
         {
             
            InitializeComponent();
@@ -49,9 +50,7 @@ namespace Windows_App
         private Form formactive = null;
         private void Form1_Load(object sender, EventArgs e)
         {
-            System.Drawing.Rectangle rectangle = Screen.PrimaryScreen.WorkingArea;
-            this.Size = new System.Drawing.Size(Convert.ToInt32(0.5 * rectangle.Width), Convert.ToInt32(0.5 * rectangle.Height));
-            this.Location = new System.Drawing.Point(10, 10);
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -203,7 +202,8 @@ namespace Windows_App
 
         private void button5_Click(object sender, EventArgs e)
         {
-            FormOpen(new Arborele());
+           
+            
         }
 
         private void label1_Click(object sender, EventArgs e)

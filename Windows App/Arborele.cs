@@ -16,5 +16,10 @@ namespace Windows_App
         {
             InitializeComponent();
         }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+           
+        }
     }
 }

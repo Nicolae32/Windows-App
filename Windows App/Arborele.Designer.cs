@@ -29,7 +29,19 @@ namespace Windows_App
         /// </summary>
         private void InitializeComponent()
         {
+            this.wb = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
+            // 
+            // wb
+            // 
+            this.wb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wb.Location = new System.Drawing.Point(0, 0);
+            this.wb.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wb.Name = "wb";
+            this.wb.Size = new System.Drawing.Size(800, 450);
+            this.wb.TabIndex = 0;
+            this.wb.Url = new System.Uri("https://ro.wikipedia.org/wiki/Arbore_cotit", System.UriKind.Absolute);
+            this.wb.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // Arborele
             // 
@@ -37,6 +49,7 @@ namespace Windows_App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.wb);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Arborele";
             this.Text = "Arborele";
@@ -45,5 +58,7 @@ namespace Windows_App
         }
 
         #endregion
+
+        private System.Windows.Forms.WebBrowser wb;
     }
 }
