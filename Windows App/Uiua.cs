@@ -19,7 +19,7 @@ namespace Windows_App
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-            richTextBox1.SaveFile("Acesta este rezumatul proiectului m.rtf", RichTextBoxStreamType.RichText);
+            
         }
     }
 }
