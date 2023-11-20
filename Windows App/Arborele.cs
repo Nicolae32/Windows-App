@@ -21,5 +21,15 @@ namespace Windows_App
         {
            
         }
+
+        private void Arborele_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void webBrowser1_DocumentCompleted_1(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            
+        }
     }
 }

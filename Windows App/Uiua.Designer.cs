@@ -1,7 +1,7 @@
 ﻿
 namespace Windows_App
 {
-    partial class Arborele
+    partial class Uiua
     {
         /// <summary>
         /// Required designer variable.
@@ -29,37 +29,37 @@ namespace Windows_App
         /// </summary>
         private void InitializeComponent()
         {
-            this.wb = new System.Windows.Forms.WebBrowser();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
-            // wb
+            // richTextBox1
             // 
-            this.wb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wb.Location = new System.Drawing.Point(0, 0);
-            this.wb.MinimumSize = new System.Drawing.Size(20, 20);
-            this.wb.Name = "wb";
-            this.wb.Size = new System.Drawing.Size(800, 450);
-            this.wb.TabIndex = 0;
-            this.wb.Url = new System.Uri("https://ro.wikipedia.org/wiki/Arbore_cotit ", System.UriKind.Absolute);
-            this.wb.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted_1);
+            this.richTextBox1.Location = new System.Drawing.Point(12, 62);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(776, 345);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "Acesta este rezumatul proiectului meu.\n\nProiectul Conține:\n\n-Informații despre ar" +
+    "borele cotit.\n-Poze amuzante cu pisici.\n-Quiz pentru testarea cunoștințelor.\n\n\n " +
+    "\n";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
-            // Arborele
+            // Uiua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(30)))), ((int)(((byte)(70)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.wb);
+            this.Controls.Add(this.richTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Arborele";
-            this.Text = "Arborele";
-            this.Load += new System.EventHandler(this.Arborele_Load);
+            this.Name = "Uiua";
+            this.Text = "Uiua";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.WebBrowser wb;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

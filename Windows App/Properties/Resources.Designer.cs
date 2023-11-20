@@ -63,6 +63,26 @@ namespace Windows_App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _773a4a2efd3768b5cb23ab4c0f9d716e {
+            get {
+                object obj = ResourceManager.GetObject("773a4a2efd3768b5cb23ab4c0f9d716e", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Biblical_accurate_cat {
+            get {
+                object obj = ResourceManager.GetObject("Biblical accurate cat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close_Window___Copy {
             get {
                 object obj = ResourceManager.GetObject("Close Window - Copy", resourceCulture);
@@ -126,6 +146,16 @@ namespace Windows_App.Properties {
         internal static System.Drawing.Bitmap user_avatar {
             get {
                 object obj = ResourceManager.GetObject("user avatar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wav0yjrbd5w91 {
+            get {
+                object obj = ResourceManager.GetObject("wav0yjrbd5w91", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

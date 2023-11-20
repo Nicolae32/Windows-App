@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing.Drawing2D;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,11 +44,13 @@ namespace Windows_App
         {
             
            InitializeComponent();
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
             //2**
             //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
         private Form formactive = null;
-        private void Form1_Load(object sender, EventArgs e)
+        
+            private void Form1_Load(object sender, EventArgs e)
         {
             
         }
@@ -202,8 +204,13 @@ namespace Windows_App
 
         private void button5_Click(object sender, EventArgs e)
         {
-           
+            FormOpen(new Arborele());
             
+        }
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FormOpen(new Arborele());
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -226,6 +233,16 @@ namespace Windows_App
 
 
 
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+             FormOpen(new Poze());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            FormOpen(new Uiua());
         }
     }
     
