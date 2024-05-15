@@ -35,6 +35,7 @@ namespace Windows_App
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.nrges = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@ namespace Windows_App
             this.button3 = new System.Windows.Forms.Button();
             this.resize = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -99,7 +99,7 @@ namespace Windows_App
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button8);
+            this.panel2.Controls.Add(this.nrges);
             this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button6);
@@ -110,6 +110,16 @@ namespace Windows_App
             this.panel2.Size = new System.Drawing.Size(177, 409);
             this.panel2.TabIndex = 3;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // nrges
+            // 
+            this.nrges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nrges.Location = new System.Drawing.Point(-1, 169);
+            this.nrges.Name = "nrges";
+            this.nrges.Size = new System.Drawing.Size(177, 42);
+            this.nrges.TabIndex = 0;
+            this.nrges.Text = "button8";
+            this.nrges.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -255,16 +265,6 @@ namespace Windows_App
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             // 
-            // button8
-            // 
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Location = new System.Drawing.Point(-1, 169);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(177, 42);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,7 +312,7 @@ namespace Windows_App
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button nrges;
     }
 }
 
