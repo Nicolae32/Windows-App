@@ -25,28 +25,13 @@ namespace Windows_App
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
     
-        //2**Fac colțurile la fereastră rotunjite.
-        /*
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-         (
-              int nLeftRect,
-              int nTopRect,
-              int nRightRect,
-              int nBottomRect,
-              int nWidthEllipse,
-             int nHeightEllipse
-
-          );
-        */
        
     public Form1()
         {
             
            InitializeComponent();
             this.SetStyle(ControlStyles.ResizeRedraw, true);
-            //2**
-            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            
         }
         private Form formactive = null;
         
@@ -57,14 +42,7 @@ namespace Windows_App
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
-            DialogResult result = MessageBox.Show("Are you sure you want to quit the app ? ", "Exit the app", MessageBoxButtons.YesNo);
-           if(result == DialogResult.Yes)
-            {
-                Application.Exit();
-            
-            }
-            */
+           
             Application.Exit();
 
         }
@@ -172,12 +150,12 @@ namespace Windows_App
 
         private void button3_Paint(object sender, PaintEventArgs e)
         {
-           // button3.BackColor = panel1.BackColor;
+          
         }
 
         private void button1_Paint(object sender, PaintEventArgs e)
         {
-            //button1.BackColor = panel1.BackColor;
+            
         }
 
         private void panel4_MouseDown(object sender, MouseEventArgs e)
