@@ -113,13 +113,16 @@ namespace Windows_App
             // 
             // nrges
             // 
+            this.nrges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(100)))));
+            this.nrges.FlatAppearance.BorderSize = 0;
             this.nrges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nrges.Location = new System.Drawing.Point(-1, 169);
             this.nrges.Name = "nrges";
             this.nrges.Size = new System.Drawing.Size(177, 42);
             this.nrges.TabIndex = 0;
-            this.nrges.Text = "button8";
-            this.nrges.UseVisualStyleBackColor = true;
+            this.nrges.Text = "NumberGuess";
+            this.nrges.UseVisualStyleBackColor = false;
+            this.nrges.Click += new System.EventHandler(this.Nrges_Click);
             // 
             // button7
             // 

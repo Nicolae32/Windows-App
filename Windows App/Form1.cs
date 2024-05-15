@@ -222,6 +222,11 @@ namespace Windows_App
         {
             FormOpen(new Uiua());
         }
+
+        private void Nrges_Click(object sender, EventArgs e)
+        {
+            FormOpen(new NumberGuess());
+        }
     }
     
 }
